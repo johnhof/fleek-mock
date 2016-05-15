@@ -1,0 +1,29 @@
+{
+  "name": "fleek-mock",
+  "version": "1.0.0",
+  "description": "A quick Mock API builder based on the Fleek framework, Swagger Docs, & Mongoose Models",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Fleek",
+    "Swagger",
+    "Models",
+    "Starter"
+  ],
+  "author": "Peter A. Tariche",
+  "license": "MIT",
+  "dependencies": {
+    "fleek-router": "^1.1.1",
+    "genit": "^1.0.3",
+    "is_js": "^0.8.0",
+    "koa": "^1.2.0",
+    "koa-bodyparser": "^2.0.1",
+    "koa-cors": "0.0.16",
+    "lodash": "^4.6.1",
+    "mongoose": "^4.4.7",
+    "swagger-injector": "^2.0.2"
+  }
+}

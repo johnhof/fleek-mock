@@ -1,0 +1,550 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "A Test API",
+        "description": "just that",
+        "version": "1.0.0"
+    },
+    "host": "127.0.0.1:3000",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/1",
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+      "/test/:id": {
+        "delete": {
+            "summary": "test",
+            "consumes": [
+                "application/json"
+            ],
+            "description": "Test endpoint\n",
+            "tags": [
+                "test"
+            ],
+            "responses": {
+                "200": {
+                    "description": "A test response removed",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/test.delete.response"
+                        }
+                    }
+                },
+                "400": {
+                    "description": "A validation error",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                },
+                "412": {
+                    "description": "A Precondition error",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                },
+                "default": {
+                    "description": "Unexpected error",
+                    "schema": {
+                        "$ref": "#/definitions/error"
+                    }
+                }
+            }
+        },
+        "get": {
+            "summary": "test",
+            "consumes": [
+                "application/json"
+            ],
+            "description": "Test endpoint\n",
+            "tags": [
+                "test"
+            ],
+            "responses": {
+                "200": {
+                    "description": "A test response found",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/test.get.response"
+                        }
+                    }
+                },
+                "400": {
+                    "description": "A validation error",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                },
+                "412": {
+                    "description": "A Precondition error",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                },
+                "default": {
+                    "description": "Unexpected error",
+                    "schema": {
+                        "$ref": "#/definitions/error"
+                    }
+                }
+            }
+        },
+        "put": {
+            "summary": "test",
+            "consumes": [
+                "application/json"
+            ],
+            "description": "Test endpoint\n",
+            "tags": [
+                "test"
+            ],
+            "parameters": [
+              {
+                "name": "comment",
+                "in": "body",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "age",
+                "in": "body",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "responses": {
+                "200": {
+                    "description": "A test response updated",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/test.put.response"
+                        }
+                    }
+                },
+                "400": {
+                    "description": "A validation error",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                },
+                "412": {
+                    "description": "A Precondition error",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                },
+                "default": {
+                    "description": "Unexpected error",
+                    "schema": {
+                        "$ref": "#/definitions/error"
+                    }
+                }
+            }
+        }
+      },
+      "/test": {
+        "put": {
+            "summary": "test",
+            "consumes": [
+                "application/json"
+            ],
+            "description": "Test endpoint\n",
+            "tags": [
+                "test"
+            ],
+            "parameters": [
+              {
+                "name": "comment",
+                "in": "body",
+                "required": false,
+                "type": "string"
+              },
+              {
+                "name": "age",
+                "in": "body",
+                "required": false,
+                "type": "string"
+              }
+            ],
+            "responses": {
+                "200": {
+                    "description": "A test response updated",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/test.put.response"
+                        }
+                    }
+                },
+                "400": {
+                    "description": "A validation error",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                },
+                "412": {
+                    "description": "A Precondition error",
+                    "schema": {
+                        "type": "object",
+                        "items": {
+                            "$ref": "#/definitions/error"
+                        }
+                    }
+                },
+                "default": {
+                    "description": "Unexpected error",
+                    "schema": {
+                        "$ref": "#/definitions/error"
+                    }
+                }
+            }
+        },
+          "post": {
+              "summary": "test",
+              "consumes": [
+                  "application/json"
+              ],
+              "description": "Test endpoint\n",
+              "tags": [
+                  "test"
+              ],
+              "parameters": [
+                {
+                  "name": "comment",
+                  "in": "body",
+                  "required": true,
+                  "type": "string"
+                },
+                {
+                  "name": "age",
+                  "in": "body",
+                  "required": true,
+                  "type": "string"
+                }
+              ],
+              "responses": {
+                  "201": {
+                      "description": "A test response created",
+                      "schema": {
+                          "type": "object",
+                          "items": {
+                              "$ref": "#/definitions/test.post.response"
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "A validation error",
+                      "schema": {
+                          "type": "object",
+                          "items": {
+                              "$ref": "#/definitions/error"
+                          }
+                      }
+                  },
+                  "412": {
+                      "description": "A Precondition error",
+                      "schema": {
+                          "type": "object",
+                          "items": {
+                              "$ref": "#/definitions/error"
+                          }
+                      }
+                  },
+                  "default": {
+                      "description": "Unexpected error",
+                      "schema": {
+                          "$ref": "#/definitions/error"
+                      }
+                  }
+              }
+          },
+          "delete": {
+              "summary": "test",
+              "consumes": [
+                  "application/json"
+              ],
+              "description": "Test endpoint\n",
+              "tags": [
+                  "test"
+              ],
+              "parameters": [
+                {
+                  "name": "comment",
+                  "in": "query",
+                  "required": false,
+                  "type": "string"
+                },
+                {
+                  "name": "_id",
+                  "in": "query",
+                  "required": false,
+                  "type": "string"
+                },
+                {
+                  "name": "age",
+                  "in": "query",
+                  "required": false,
+                  "type": "string"
+                }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "A test response removed",
+                      "schema": {
+                          "type": "object",
+                          "items": {
+                              "$ref": "#/definitions/test.delete.response"
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "A validation error",
+                      "schema": {
+                          "type": "object",
+                          "items": {
+                              "$ref": "#/definitions/error"
+                          }
+                      }
+                  },
+                  "412": {
+                      "description": "A Precondition error",
+                      "schema": {
+                          "type": "object",
+                          "items": {
+                              "$ref": "#/definitions/error"
+                          }
+                      }
+                  },
+                  "default": {
+                      "description": "Unexpected error",
+                      "schema": {
+                          "$ref": "#/definitions/error"
+                      }
+                  }
+              }
+          },
+          "get": {
+              "summary": "test",
+              "consumes": [
+                  "application/json"
+              ],
+              "description": "Test endpoint\n",
+              "tags": [
+                  "test"
+              ],
+              "parameters": [
+                {
+                  "name": "comment",
+                  "in": "query",
+                  "required": false,
+                  "type": "string"
+                },
+                {
+                  "name": "_id",
+                  "in": "query",
+                  "required": false,
+                  "type": "string"
+                },
+                {
+                  "name": "age",
+                  "in": "query",
+                  "required": false,
+                  "type": "string"
+                }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "A test response found",
+                      "schema": {
+                          "type": "object",
+                          "items": {
+                              "$ref": "#/definitions/test.get.response"
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "A validation error",
+                      "schema": {
+                          "type": "object",
+                          "items": {
+                              "$ref": "#/definitions/error"
+                          }
+                      }
+                  },
+                  "412": {
+                      "description": "A Precondition error",
+                      "schema": {
+                          "type": "object",
+                          "items": {
+                              "$ref": "#/definitions/error"
+                          }
+                      }
+                  },
+                  "default": {
+                      "description": "Unexpected error",
+                      "schema": {
+                          "$ref": "#/definitions/error"
+                      }
+                  }
+              }
+          }
+      }
+    },
+    "definitions": {
+        "test.post": {
+            "type": "object",
+            "properties": {
+                "comment": {
+                  "type": "string"
+                },
+                "age": {
+                  "type": "string"
+                }
+            }
+        },
+        "test.put": {
+            "type": "object",
+            "properties": {
+                "comment": {
+                  "type": "string"
+                },
+                "age": {
+                  "type": "string"
+                }
+            }
+        },
+        "test.get.response": {
+          "type":"object",
+          "properties": {
+              "code": {
+                  "type": "integer",
+                  "format": "int32"
+              },
+              "success": {
+                  "type": "boolean"
+              },
+              "data": {
+                  "type": "object",
+                  "properties": {
+                    "results": {
+                      "type": "array"
+                    }
+                  }
+              }
+          }
+        },
+        "test.delete.response": {
+          "type":"object",
+          "properties": {
+              "code": {
+                  "type": "integer",
+                  "format": "int32"
+              },
+              "success": {
+                  "type": "boolean"
+              },
+              "data": {
+                  "type": "object",
+                  "properties": {
+                    "results": {
+                      "type": "array"
+                    }
+                  }
+              }
+          }
+        },
+        "test.put.response": {
+          "type":"object",
+          "properties": {
+              "code": {
+                  "type": "integer",
+                  "format": "int32"
+              },
+              "success": {
+                  "type": "boolean"
+              },
+              "data": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "comment": {
+                      "type": "string"
+                    },
+                    "age": {
+                      "type" : "string"
+                    }
+                  }
+              }
+          }
+        },
+        "test.post.response": {
+          "type":"object",
+          "properties": {
+              "code": {
+                  "type": "integer",
+                  "format": "int32"
+              },
+              "success": {
+                  "type": "boolean"
+              },
+              "data": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "comment": {
+                      "type": "string"
+                    },
+                    "age": {
+                      "type" : "string"
+                    }
+                  }
+              }
+          }
+        },
+        "error": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "success": {
+                    "type": "boolean"
+                },
+                "data": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
