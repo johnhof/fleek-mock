@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A quick Mock API builder based on the Fleek framework, Swagger Docs, & Mongoose Models",
   "main": "index.js",
+  "repository": "https://github.com/fleekjs/fleek-mock",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
